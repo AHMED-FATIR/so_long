@@ -1,0 +1,12 @@
+{
+	"files.associations": {
+		"mlx.h": "c",
+		"libft.h": "c",
+		"fcntl.h": "c",
+		"__config": "c",
+		"so_long.h": "c",
+		"stdio.h": "c",
+		"so_long_bonus.h": "c"
+	},
+	"C_Cpp.errorSquiggles": "disabled"
+}
