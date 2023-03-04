@@ -1,5 +1,4 @@
 # so_long
-So_Long
 This is my implementation of the so_long project from 42 school.
 
 Description
