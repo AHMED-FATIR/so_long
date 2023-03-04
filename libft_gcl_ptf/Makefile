@@ -6,7 +6,7 @@
 #    By: afatir <afatir@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/15 23:01:07 by afatir            #+#    #+#              #
-#    Updated: 2023/02/13 12:50:31 by afatir           ###   ########.fr        #
+#    Updated: 2023/03/04 18:20:43 by afatir           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME	= libft_gcl_ptf.a
 CC		= cc
 CFLAGS	= -Wall -Wextra -Werror
 RM		= rm -f
-OBJS	= ${SRCS:%.c=object/%.o}
+OBJS	= ${SRCS:%.c=%.o}
 SRCS	= ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c \
 			ft_strlen.c ft_memset.c ft_bzero.c ft_memcpy.c ft_memmove.c \
 			ft_strlcpy.c ft_strlcat.c ft_toupper.c ft_tolower.c ft_strchr.c \
@@ -28,7 +28,7 @@ SRCS	= ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c \
 all:		${NAME}
 ${NAME}:	${OBJS} 
 			@ar rcs ${NAME} ${OBJS}
-object/%.o: %.c libft.h
+%.o: %.c libft.h
 			${CC} ${CFLAGS}  -c $< -o $@
 clean:
 			${RM} ${OBJS}

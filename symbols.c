@@ -6,7 +6,7 @@
 /*   By: afatir <afatir@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/28 23:54:27 by afatir            #+#    #+#             */
-/*   Updated: 2023/02/13 14:52:33 by afatir           ###   ########.fr       */
+/*   Updated: 2023/03/04 18:15:32 by afatir           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,28 +71,25 @@ int	ft_symbols(t_data *data)
 
 int	e_valid_path(char **p)
 {
-	t_var	v;
+	int		x;
+	int		y;
 
-	v.flag = 0;
-	v.y = 0;
-	while (p[v.y])
+	y = 0;
+	while (p[y])
 	{
-		v.x = 0;
-		while (p[v.y][v.x])
+		x = 0;
+		while (p[y][x])
 		{
-			if (p[v.y][v.x] == 'E')
+			if (p[y][x] == 'E')
 			{
-				v.flag = 1;
-				break ;
+				if (p[y][x - 1] != 'P' && p[y][x + 1] != 'P' \
+					&& p[y - 1][x] != 'P' && p[y + 1][x] != 'P')
+					return (0);
 			}
-			v.x++;
+			x++;
 		}
-		if (v.flag == 1)
-			break ;
-		v.y++;
+		y++;
 	}
-	if (p[v.y][v.x - 1] == '1' && p[v.y][v.x + 1] == '1' \
-		&& p[v.y - 1][v.x] == '1' && p[v.y + 1][v.x] == '1')
-		return (0);
+	ft_printf("hi\n");
 	return (1);
 }
