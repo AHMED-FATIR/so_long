@@ -5,6 +5,8 @@ Description :
 So_Long is a small 2D game where the player has to collect all the collectibles 
 and reach the exit door while avoiding obstacles and enemies. 
 The game is written in C programming language and uses the mlx library for graphics.
+
+
 How to Play : 
 The player can move around the game board using the arrow keys. 
 The goal is to collect all the collectibles and reach the exit door while avoiding obstacles and enemies. 
